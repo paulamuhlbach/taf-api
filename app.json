@@ -1,0 +1,6 @@
+{
+    "name": "Projeto Portal Transparência Ativa",
+    "description": "TCC2 - Paula Mühlbach",
+    "repository": "https://github.com/paulamuhlbach/taf-api",
+    "image": "heroku/java"
+  }
