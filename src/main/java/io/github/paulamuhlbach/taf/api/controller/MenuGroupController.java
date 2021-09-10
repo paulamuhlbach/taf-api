@@ -49,6 +49,7 @@ public class MenuGroupController {
 			menuGroup.setDescription(menuGroupRequest.getDescription());
 			menuGroup.setLevel(menuGroupRequest.getLevel());
 			menuGroup.setIdSubmenuGroup(menuGroupRequest.getIdSubmenuGroup());
+			menuGroup.setIdIcon(menuGroupRequest.getIdIcon());
 			menuGroup.setIdUserCreated(menuGroupRequest.getIdUserCreated());
 			menuGroup.setIdUserModify(menuGroupRequest.getIdUserModify());
 			menuGroup.setCreatedIn(menuGroupRequest.getCreatedIn());

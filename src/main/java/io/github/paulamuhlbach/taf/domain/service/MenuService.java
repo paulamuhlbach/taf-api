@@ -39,6 +39,7 @@ public class MenuService {
         entity.setIdMenuGroup(menu.getIdMenuGroup());
         entity.setDescription(menu.getDescription());
         entity.setLevel(menu.getLevel());
+        entity.setIdIcon(menu.getIdIcon());
         entity.setIdUserCreated(menu.getIdUserCreated());
         entity.setIdUserModify(menu.getIdUserModify());
         entity.setCreatedIn(menu.getCreatedIn());

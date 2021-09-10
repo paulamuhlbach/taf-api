@@ -50,6 +50,7 @@ public class PageController {
 			page.setSlug(pageRequest.getSlug());
 			page.setUrl(pageRequest.getUrl());
 			page.setIdMenu(pageRequest.getIdMenu());
+			page.setIdIcon(pageRequest.getIdIcon());
 			page.setDescription(pageRequest.getDescription());
 			page.setIdUserCreated(pageRequest.getIdUserCreated());
 			page.setIdUserModify(pageRequest.getIdUserModify());

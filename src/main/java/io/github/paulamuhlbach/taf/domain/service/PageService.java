@@ -42,6 +42,7 @@ public class PageService {
         entity.setSlug(page.getSlug());
         entity.setUrl(page.getUrl());
         entity.setIdMenu(page.getIdMenu());
+        entity.setIdIcon(page.getIdIcon());
         entity.setDescription(page.getDescription());
         entity.setIdUserCreated(page.getIdUserCreated());
         entity.setIdUserModify(page.getIdUserModify());

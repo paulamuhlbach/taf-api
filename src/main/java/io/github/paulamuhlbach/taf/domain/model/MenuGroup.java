@@ -26,6 +26,9 @@ public class MenuGroup {
     @Size(max = 200)
     private String description;
 
+    @Column(name = "id_image_icon")
+    private Long idIcon;
+
     @Column(name = "created_in")
     private OffsetDateTime createdIn;
 
@@ -53,6 +56,10 @@ public class MenuGroup {
     @ManyToOne
     @JoinColumn(name = "id_user_modify", insertable = false, updatable = false)
     private ContentUser userModifyContent;
+
+    @ManyToOne
+    @JoinColumn(name = "id_image_icon", insertable = false, updatable = false)
+    private Imagem icon;
 
     public Long getId() {
         return id;
@@ -158,6 +165,22 @@ public class MenuGroup {
 
     public void setUserModifyContent(ContentUser userModifyContent) {
         this.userModifyContent = userModifyContent;
+    }
+
+    public Long getIdIcon() {
+        return idIcon;
+    }
+
+    public void setIdIcon(Long idIcon) {
+        this.idIcon = idIcon;
+    }
+
+    public Imagem getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Imagem icon) {
+        this.icon = icon;
     }
 
 }

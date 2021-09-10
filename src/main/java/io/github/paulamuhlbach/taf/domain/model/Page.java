@@ -46,6 +46,9 @@ public class Page {
     @JoinColumn(name = "id_page_type", insertable = false, updatable = false)
     private PageType pageType;
 
+    @Column(name = "id_image_icon")
+    private Long idIcon;
+
     @NotNull
     @Column(name = "id_menu")
     private Long idMenu;
@@ -68,6 +71,10 @@ public class Page {
     @ManyToOne
     @JoinColumn(name = "id_user_modify", insertable = false, updatable = false)
     private ContentUser userModifyContent;
+
+    @ManyToOne
+    @JoinColumn(name = "id_image_icon", insertable = false, updatable = false)
+    private Imagem icon;
 
     public Long getId() {
         return id;
@@ -206,6 +213,22 @@ public class Page {
 
     public void setUserModifyContent(ContentUser userModifyContent) {
         this.userModifyContent = userModifyContent;
+    }
+
+    public Long getIdIcon() {
+        return idIcon;
+    }
+
+    public void setIdIcon(Long idIcon) {
+        this.idIcon = idIcon;
+    }
+
+    public Imagem getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Imagem icon) {
+        this.icon = icon;
     }
 
 }

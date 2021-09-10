@@ -43,6 +43,7 @@ public class MenuGroupService {
         entity.setIdSubmenuGroup(menuGroup.getIdSubmenuGroup());
         entity.setIdUserCreated(menuGroup.getIdUserCreated());
         entity.setIdUserModify(menuGroup.getIdUserModify());
+        entity.setIdIcon(menuGroup.getIdIcon());
         entity.setCreatedIn(menuGroup.getCreatedIn());
         entity.setLastModify(menuGroup.getLastModify());
         entity.setActive(menuGroup.getActive());

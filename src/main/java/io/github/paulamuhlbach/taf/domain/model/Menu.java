@@ -35,6 +35,9 @@ public class Menu {
     @Column(name = "id_menu_group")
     private Long idMenuGroup;
 
+    @Column(name = "id_image_icon")
+    private Long idIcon;
+
     @ManyToOne
     @JoinColumn(name = "id_menu_group", insertable = false, updatable = false)
     private MenuGroup menuGroup;
@@ -53,6 +56,10 @@ public class Menu {
     @ManyToOne
     @JoinColumn(name = "id_user_modify", insertable = false, updatable = false)
     private ContentUser userModifyContent;
+
+    @ManyToOne
+    @JoinColumn(name = "id_image_icon", insertable = false, updatable = false)
+    private Imagem icon;
 
     public Long getId() {
         return id;
@@ -158,6 +165,22 @@ public class Menu {
 
     public void setUserModifyContent(ContentUser userModifyContent) {
         this.userModifyContent = userModifyContent;
+    }
+
+    public Long getIdIcon() {
+        return idIcon;
+    }
+
+    public void setIdIcon(Long idIcon) {
+        this.idIcon = idIcon;
+    }
+
+    public Imagem getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Imagem icon) {
+        this.icon = icon;
     }
 
 }
