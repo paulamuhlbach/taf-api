@@ -37,10 +37,4 @@ public class PageContentFileService {
         return repository.findAll().stream();
     }
 
-    public String getUrlFile(Long id) {
-        PageContentFile tempFile = repository.getById(id);
-        String urlFile = tempFile.getUrlFile();
-        return urlFile;
-    }
-
 }

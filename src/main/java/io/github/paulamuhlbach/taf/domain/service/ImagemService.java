@@ -37,9 +37,4 @@ public class ImagemService {
         return repository.findAll().stream();
     }
 
-    public String getUrlFile(Long id) {
-        Imagem tempImage = repository.getById(id);
-        String urlFile = tempImage.getUrlFile();
-        return urlFile;
-    }
 }
