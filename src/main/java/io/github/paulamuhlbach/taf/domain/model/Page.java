@@ -21,14 +21,12 @@ public class Page {
     @Size(max = 45)
     private String slug;
 
-    @NotNull
     @Size(max = 45)
     private String url;
 
     @Size(max = 200)
     private String description;
 
-    @NotNull
     @Column(name = "created_in")
     private OffsetDateTime createdIn;
 
@@ -166,15 +164,6 @@ public class Page {
         this.slug = slug;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-        // pegar o nome do grupo do menu, o nível e o slug!!!!
-    }
-
     public Long getIdMenu() {
         return idMenu;
     }
@@ -229,6 +218,26 @@ public class Page {
 
     public void setIcon(Imagem icon) {
         this.icon = icon;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+
+        // String nomeMenu = this.menu.getName();
+        String admin = "admin";
+        String separador = "/";
+
+        if (this.getIdPageType() == 5) {
+
+            this.url = separador + admin + separador + this.slug;
+        } else {
+
+            this.url = separador + separador + this.slug;
+        }
+
     }
 
 }
