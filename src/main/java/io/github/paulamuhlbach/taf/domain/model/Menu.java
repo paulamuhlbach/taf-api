@@ -22,7 +22,6 @@ public class Menu {
     @Size(max = 200)
     private String description;
 
-    @NotNull
     @Column(name = "created_in")
     private OffsetDateTime createdIn;
 
