@@ -37,6 +37,7 @@ public class MenuService {
     private Menu toEntity(Menu menu) {
         Menu entity = new Menu();
         entity.setIdMenuGroup(menu.getIdMenuGroup());
+        entity.setName(menu.getName());
         entity.setDescription(menu.getDescription());
         entity.setLevel(menu.getLevel());
         entity.setIdIcon(menu.getIdIcon());

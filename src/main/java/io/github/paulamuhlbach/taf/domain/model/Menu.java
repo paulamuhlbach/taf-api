@@ -14,6 +14,11 @@ public class Menu {
     private Long id;
 
     @NotNull
+    @Column(name = "menu_name")
+    @Size(max = 50)
+    private String name;
+
+    @NotNull
     @Size(max = 200)
     private String description;
 
@@ -67,6 +72,14 @@ public class Menu {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
