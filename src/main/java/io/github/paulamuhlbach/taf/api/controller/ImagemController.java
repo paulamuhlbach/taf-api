@@ -28,7 +28,7 @@ public class ImagemController {
 	@Autowired
 	private ImagemStorageService imagemService;
 
-	@PostMapping("/upload")
+	@PostMapping("/api/userProfile/imagem/upload")
 	public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file) {
 		String message = "";
 		try {
@@ -42,11 +42,11 @@ public class ImagemController {
 		}
 	}
 
-	@GetMapping("/files")
+	@GetMapping("/api/userProfile/imagem/files")
 	public ResponseEntity<List<ResponseFile>> getListFiles() {
 		List<ResponseFile> files = imagemService.getAllFiles().map(imagem -> {
-			String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/files/")
-					.path(Long.toString(imagem.getId())).toUriString();
+			String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+					.path("/api/userProfile/imagem/files/").path(Long.toString(imagem.getId())).toUriString();
 
 			return new ResponseFile(imagem.getName(), fileDownloadUri, imagem.getType(), imagem.getData().length);
 		}).collect(Collectors.toList());
@@ -54,7 +54,7 @@ public class ImagemController {
 		return ResponseEntity.status(HttpStatus.OK).body(files);
 	}
 
-	@GetMapping("/files/{id}")
+	@GetMapping("/api/userProfile/imagem/files/{id}")
 	public ResponseEntity<byte[]> getFile(@PathVariable Long id) {
 		Imagem imagem = imagemService.getFile(id);
 
