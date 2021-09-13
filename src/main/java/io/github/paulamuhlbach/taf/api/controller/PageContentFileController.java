@@ -45,8 +45,8 @@ public class PageContentFileController {
 					.path("/pageContentFiles/content/").path(Long.toString(pageContentFile.getId()))
 					.path(pageContentFile.getUrlFile()).toUriString();
 
-			return new ResponseFile(pageContentFile.getId(), pageContentFile.getFilename(), fileDownloadUri,
-					pageContentFile.getMimetype(), pageContentFile.getFile().length);
+			return new ResponseFile(pageContentFile.getFilename(), fileDownloadUri, pageContentFile.getFilename(),
+					pageContentFile.getFile().length);
 		}).collect(Collectors.toList());
 
 		return ResponseEntity.status(HttpStatus.OK).body(files);

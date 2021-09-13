@@ -1,25 +1,20 @@
 package io.github.paulamuhlbach.taf.domain.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Entity
+@Table(name = "imagem")
 public class Imagem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @Column
-    private String filename;
+    private String name;
 
-    @NotNull
-    @Column
-    private String mimetype;
+    private String type;
 
     @Lob
-    @Column(name = "file")
     private byte[] data;
 
     @Column(name = "url_file")
@@ -28,16 +23,13 @@ public class Imagem {
     public Imagem() {
     }
 
-    public Imagem(String filename, String mimetype, byte[] data) {
+    public Imagem(String name, String type, byte[] data) {
 
         // this.id = id;
-        this.filename = filename;
-        this.mimetype = mimetype;
+        this.name = name;
+        this.type = type;
         this.data = data;
-        this.urlFile = this.getUrlFile();
-    }
-
-    public Imagem(String fileName2, String contentType, String urlFile2, byte[] bytes) {
+        // this.urlFile = this.getUrlFile();
     }
 
     public Long getId() {
@@ -48,28 +40,32 @@ public class Imagem {
         this.id = id;
     }
 
-    public String getFilename() {
-        return filename;
+    public String getName() {
+        return name;
     }
 
-    public void setFilename(String filename) {
-        this.filename = filename;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getMimetype() {
-        return mimetype;
+    public String getType() {
+        return type;
     }
 
-    public void setMimetype(String mimetype) {
-        this.mimetype = mimetype;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public byte[] getFile() {
+    public byte[] getData() {
         return data;
     }
 
-    public void setFile(byte[] data) {
+    public void setData(byte[] data) {
         this.data = data;
+    }
+
+    public String getIdAlocadoFoto() {
+        return Long.toString(id);
     }
 
     public String getUrlFile() {
@@ -78,10 +74,10 @@ public class Imagem {
 
     public void setUrlFile(String urlFile) {
 
-        String fileExtension = getFileExtension(filename);
+        String fileExtension = getFileExtension(name);
 
         if (fileExtension != null)
-            this.urlFile = this.filename + '.' + fileExtension;
+            this.urlFile = this.name + '.' + fileExtension;
         else
             this.urlFile = null;
 
