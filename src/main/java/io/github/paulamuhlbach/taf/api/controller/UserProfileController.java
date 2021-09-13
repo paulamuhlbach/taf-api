@@ -15,7 +15,8 @@ import io.github.paulamuhlbach.taf.domain.service.UserProfileService;
 import io.github.paulamuhlbach.taf.api.exceptionhandler.ResourceNotFoundException;
 
 @RestController
-@RequestMapping("/userProfiles")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/userProfiles")
 public class UserProfileController {
 
 	@Autowired

@@ -15,7 +15,8 @@ import io.github.paulamuhlbach.taf.domain.service.ContentUserService;
 import io.github.paulamuhlbach.taf.api.exceptionhandler.ResourceNotFoundException;
 
 @RestController
-@RequestMapping("/contentUsers")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/contentUsers")
 public class ContentUserController {
 
 	@Autowired

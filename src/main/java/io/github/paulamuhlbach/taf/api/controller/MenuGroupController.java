@@ -15,7 +15,8 @@ import io.github.paulamuhlbach.taf.domain.service.MenuGroupService;
 import io.github.paulamuhlbach.taf.api.exceptionhandler.ResourceNotFoundException;
 
 @RestController
-@RequestMapping("/menuGroups")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/menuGroups")
 public class MenuGroupController {
 
 	@Autowired

@@ -15,7 +15,8 @@ import io.github.paulamuhlbach.taf.domain.service.InstituicaoService;
 import io.github.paulamuhlbach.taf.api.exceptionhandler.ResourceNotFoundException;
 
 @RestController
-@RequestMapping("/instituicoes")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/instituicoes")
 public class InstituicaoController {
 
 	@Autowired

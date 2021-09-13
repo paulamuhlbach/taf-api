@@ -18,12 +18,13 @@ import io.github.paulamuhlbach.taf.domain.service.PageContentFileService;
 import io.github.paulamuhlbach.taf.api.message.*;
 
 @Controller
+@CrossOrigin("http://localhost:4200")
 public class PageContentFileController {
 
 	@Autowired
 	private PageContentFileService pageContentFileService;
 
-	@PostMapping("/upload/pageContentFiles/content")
+	@PostMapping("/api/upload/pageContentFiles/content")
 	public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file) {
 		String message = "";
 		try {
@@ -37,7 +38,7 @@ public class PageContentFileController {
 		}
 	}
 
-	@GetMapping("/pageContentFiles/content")
+	@GetMapping("/api/pageContentFiles/content")
 	public ResponseEntity<List<ResponseFile>> getListFiles() {
 		List<ResponseFile> files = pageContentFileService.getAllFiles().map(pageContentFile -> {
 			String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
@@ -51,7 +52,7 @@ public class PageContentFileController {
 		return ResponseEntity.status(HttpStatus.OK).body(files);
 	}
 
-	@GetMapping("/pageContentFiles/content/{id}")
+	@GetMapping("/api/pageContentFiles/content/{id}")
 	public ResponseEntity<byte[]> getFile(@PathVariable Long id) {
 		PageContentFile pageContentFile = pageContentFileService.getFile(id);
 
@@ -61,7 +62,7 @@ public class PageContentFileController {
 				.body(pageContentFile.getFile());
 	}
 
-	@DeleteMapping("/pageContentFiles/content/{id}")
+	@DeleteMapping("/api/pageContentFiles/content/{id}")
 	public void delete(@PathVariable(required = true) long id) {
 		pageContentFileService.delete(id);
 	}

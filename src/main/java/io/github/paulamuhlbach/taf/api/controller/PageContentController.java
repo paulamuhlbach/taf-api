@@ -15,7 +15,8 @@ import io.github.paulamuhlbach.taf.domain.service.PageContentService;
 import io.github.paulamuhlbach.taf.api.exceptionhandler.ResourceNotFoundException;
 
 @RestController
-@RequestMapping("/pageContents")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/pageContents")
 public class PageContentController {
 
 	@Autowired

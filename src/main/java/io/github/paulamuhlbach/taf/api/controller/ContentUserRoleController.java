@@ -15,7 +15,8 @@ import io.github.paulamuhlbach.taf.domain.service.ContentUserRoleService;
 import io.github.paulamuhlbach.taf.api.exceptionhandler.ResourceNotFoundException;
 
 @RestController
-@RequestMapping("/contentUserRoles")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/contentUserRoles")
 public class ContentUserRoleController {
 
 	@Autowired

@@ -13,7 +13,8 @@ import io.github.paulamuhlbach.taf.domain.repository.EnderecoRepository;
 import io.github.paulamuhlbach.taf.api.exceptionhandler.ResourceNotFoundException;
 
 @RestController
-@RequestMapping("/enderecos")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/enderecos")
 public class EnderecoController {
 
     @Autowired

@@ -13,7 +13,8 @@ import io.github.paulamuhlbach.taf.domain.repository.CidadeRepository;
 import io.github.paulamuhlbach.taf.api.exceptionhandler.ResourceNotFoundException;
 
 @RestController
-@RequestMapping("/cidades")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/cidades")
 public class CidadeController {
 
     @Autowired
