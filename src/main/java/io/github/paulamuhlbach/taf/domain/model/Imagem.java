@@ -64,10 +64,6 @@ public class Imagem {
         this.data = data;
     }
 
-    public String getIdAlocadoFoto() {
-        return Long.toString(id);
-    }
-
     public String getUrlFile() {
         return urlFile;
     }
