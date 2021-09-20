@@ -49,6 +49,7 @@ public class PageService {
         entity.setCreatedIn(page.getCreatedIn());
         entity.setLastModify(page.getLastModify());
         entity.setActive(page.getActive());
+        entity.setOrdem(page.getOrdem());
 
         return entity;
     }

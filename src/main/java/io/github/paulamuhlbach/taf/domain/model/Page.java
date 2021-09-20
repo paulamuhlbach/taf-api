@@ -37,6 +37,10 @@ public class Page {
     private String active;
 
     @NotNull
+    @Column(name = "order")
+    private Long ordem;
+
+    @NotNull
     @Column(name = "id_page_type")
     private Long idPageType;
 
@@ -138,6 +142,14 @@ public class Page {
 
     public void setActive(String active) {
         this.active = active;
+    }
+
+    public Long getOrdem() {
+        return ordem;
+    }
+
+    public void setOrdem(Long ordem) {
+        this.ordem = ordem;
     }
 
     public Long getIdPageType() {

@@ -58,6 +58,7 @@ public class PageController {
 			page.setCreatedIn(pageRequest.getCreatedIn());
 			page.setLastModify(pageRequest.getLastModify());
 			page.setActive(pageRequest.getActive());
+			page.setOrdem(pageRequest.getOrdem());
 
 			return pageRepository.save(page);
 
