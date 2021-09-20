@@ -36,7 +36,6 @@ public class Page {
     @Size(max = 1, min = 1)
     private String active;
 
-    @NotNull
     @Column(name = "order")
     private Long ordem;
 
