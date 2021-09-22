@@ -39,8 +39,8 @@ public class MenuGroup {
     @Size(max = 1, min = 1)
     private String active;
 
-    @Column(name = "id_submenu_group")
-    private Long idSubmenuGroup;
+    @Column(name = "id_submenu")
+    private Long idSubmenu;
 
     @NotNull
     @Column(name = "id_user_created")
@@ -62,8 +62,8 @@ public class MenuGroup {
     private Imagem icon;
 
     @ManyToOne
-    @JoinColumn(name = "id_submenu_group", insertable = false, updatable = false)
-    private MenuGroup subGroupForMenu;
+    @JoinColumn(name = "id_submenu", insertable = false, updatable = false)
+    private Menu subGroupForMenu;
 
     public Long getId() {
         return id;
@@ -131,19 +131,19 @@ public class MenuGroup {
         this.active = active;
     }
 
-    public Long getIdSubmenuGroup() {
-        return idSubmenuGroup;
+    public Long getIdSubmenu() {
+        return idSubmenu;
     }
 
-    public void setIdSubmenuGroup(Long idSubmenuGroup) {
-        this.idSubmenuGroup = idSubmenuGroup;
+    public void setIdSubmenu(Long idSubmenu) {
+        this.idSubmenu = idSubmenu;
     }
 
-    public MenuGroup getSubGroupForMenu() {
+    public Menu getSubGroupForMenu() {
         return subGroupForMenu;
     }
 
-    public void setSubGroupForMenu(MenuGroup subGroupForMenu) {
+    public void setSubGroupForMenu(Menu subGroupForMenu) {
         this.subGroupForMenu = subGroupForMenu;
     }
 

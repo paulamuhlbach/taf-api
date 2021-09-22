@@ -40,7 +40,7 @@ public class MenuGroupService {
         entity.setGroupName(menuGroup.getGroupName());
         entity.setDescription(menuGroup.getDescription());
         entity.setLevel(menuGroup.getLevel());
-        entity.setIdSubmenuGroup(menuGroup.getIdSubmenuGroup());
+        entity.setIdSubmenu(menuGroup.getIdSubmenu());
         entity.setIdUserCreated(menuGroup.getIdUserCreated());
         entity.setIdUserModify(menuGroup.getIdUserModify());
         entity.setIdIcon(menuGroup.getIdIcon());

@@ -39,8 +39,8 @@ public class Menu {
     @Column(name = "id_menu_group")
     private Long idMenuGroup;
 
-    @Column(name = "id_subgroup_menu")
-    private Long idSubGroupMenu;
+    @Column(name = "id_submenu")
+    private Long idSubmenu;
 
     @Column(name = "id_image_icon")
     private Long idIcon;
@@ -50,8 +50,8 @@ public class Menu {
     private MenuGroup menuGroup;
 
     @ManyToOne
-    @JoinColumn(name = "id_subgroup_menu", insertable = false, updatable = false)
-    private MenuGroup subMenuGroup;
+    @JoinColumn(name = "id_submenu", insertable = false, updatable = false)
+    private Menu subMenu;
 
     @NotNull
     @Column(name = "id_user_created")
@@ -203,19 +203,19 @@ public class Menu {
     }
 
     public Long getIdSubGroupMenu() {
-        return idSubGroupMenu;
+        return idSubmenu;
     }
 
-    public void setIdSubGroupMenu(Long idSubGroupMenu) {
-        this.idSubGroupMenu = idSubGroupMenu;
+    public void setIdSubGroupMenu(Long idSubmenu) {
+        this.idSubmenu = idSubmenu;
     }
 
-    public MenuGroup getSubMenuGroup() {
-        return subMenuGroup;
+    public Menu getSubMenuGroup() {
+        return subMenu;
     }
 
-    public void setSubMenuGroup(MenuGroup subMenuGroup) {
-        this.subMenuGroup = subMenuGroup;
+    public void setSubMenuGroup(Menu subMenu) {
+        this.subMenu = subMenu;
     }
 
 }
