@@ -61,6 +61,10 @@ public class MenuGroup {
     @JoinColumn(name = "id_image_icon", insertable = false, updatable = false)
     private Imagem icon;
 
+    @ManyToOne
+    @JoinColumn(name = "id_submenu_group", insertable = false, updatable = false)
+    private MenuGroup subGroupForMenu;
+
     public Long getId() {
         return id;
     }
@@ -133,6 +137,14 @@ public class MenuGroup {
 
     public void setIdSubmenuGroup(Long idSubmenuGroup) {
         this.idSubmenuGroup = idSubmenuGroup;
+    }
+
+    public MenuGroup getSubGroupForMenu() {
+        return subGroupForMenu;
+    }
+
+    public void setSubGroupForMenu(MenuGroup subGroupForMenu) {
+        this.subGroupForMenu = subGroupForMenu;
     }
 
     public Long getIdUserCreated() {

@@ -15,16 +15,19 @@ public class Page {
 
     @NotNull
     @Size(max = 100)
+    @Column
     private String title;
 
     @NotNull
     @Size(max = 45)
+    @Column
     private String slug;
 
     @Size(max = 45)
+    @Column
     private String url;
 
-    @Size(max = 200)
+    @Column
     private String description;
 
     @Column(name = "created_in")
@@ -34,6 +37,7 @@ public class Page {
     private OffsetDateTime lastModify;
 
     @Size(max = 1, min = 1)
+    @Column
     private String active;
 
     @Column(name = "order")
@@ -237,17 +241,7 @@ public class Page {
 
     public void setUrl(String url) {
 
-        // String nomeMenu = this.menu.getName();
-        String admin = "admin";
-        String separador = "/";
-
-        if (this.getIdPageType() == 5) {
-
-            this.url = separador + admin + separador + this.slug;
-        } else {
-
-            this.url = separador + separador + this.slug;
-        }
+        this.url = url;
 
     }
 
