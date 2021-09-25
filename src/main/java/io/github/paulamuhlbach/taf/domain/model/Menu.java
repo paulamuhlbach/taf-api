@@ -146,12 +146,36 @@ public class Menu {
         this.idMenuGroup = idMenuGroup;
     }
 
+    public Long getIdSubmenu() {
+        return idSubmenu;
+    }
+
+    public void setIdSubmenu(Long idSubmenu) {
+        this.idSubmenu = idSubmenu;
+    }
+
+    public Long getIdIcon() {
+        return idIcon;
+    }
+
+    public void setIdIcon(Long idIcon) {
+        this.idIcon = idIcon;
+    }
+
     public MenuGroup getMenuGroup() {
         return menuGroup;
     }
 
     public void setMenuGroup(MenuGroup menuGroup) {
         this.menuGroup = menuGroup;
+    }
+
+    public Menu getSubMenu() {
+        return subMenu;
+    }
+
+    public void setSubMenu(Menu subMenu) {
+        this.subMenu = subMenu;
     }
 
     public Long getIdUserCreated() {
@@ -186,36 +210,12 @@ public class Menu {
         this.userModifyContent = userModifyContent;
     }
 
-    public Long getIdIcon() {
-        return idIcon;
-    }
-
-    public void setIdIcon(Long idIcon) {
-        this.idIcon = idIcon;
-    }
-
     public Imagem getIcon() {
         return icon;
     }
 
     public void setIcon(Imagem icon) {
         this.icon = icon;
-    }
-
-    public Long getIdSubGroupMenu() {
-        return idSubmenu;
-    }
-
-    public void setIdSubGroupMenu(Long idSubmenu) {
-        this.idSubmenu = idSubmenu;
-    }
-
-    public Menu getSubMenuGroup() {
-        return subMenu;
-    }
-
-    public void setSubMenuGroup(Menu subMenu) {
-        this.subMenu = subMenu;
     }
 
 }

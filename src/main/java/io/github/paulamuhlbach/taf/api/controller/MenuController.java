@@ -47,7 +47,7 @@ public class MenuController {
 		return menuRepository.findById(id).map(menu -> {
 
 			menu.setIdMenuGroup(menuRequest.getIdMenuGroup());
-			menu.setIdSubGroupMenu(menuRequest.getIdSubGroupMenu());
+			menu.setIdSubmenu(menuRequest.getIdSubmenu());
 			menu.setName(menuRequest.getName());
 			menu.setDescription(menuRequest.getDescription());
 			menu.setLevel(menuRequest.getLevel());
